@@ -3,7 +3,8 @@
 from openerp import models, fields, api
 
 class TodoTask(models.Model):
-    _inherit = 'todo.task'
+    _name = 'todo.task'
+    _inherit = ['todo.task', 'mail.thread']
 
     user_id = fields.Many2one('res.users', 'Responsible')
     date_deadline = fields.Date('Deadline')
@@ -25,3 +26,4 @@ class TodoTask(models.Model):
             raise Exception('Only the responsible can do this!')
         else:
             return super(TodoTask, self).do_toggle_done()
+

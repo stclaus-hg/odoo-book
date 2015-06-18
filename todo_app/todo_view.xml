@@ -57,10 +57,11 @@
                     res_model="todo.task"
                     view_mode="tree,form" />
 
-        <menuitem id="menu _todo_task"
+        <menuitem id="menu_todo_task"
                   name="To-Do Tasks"
                   parent="mail.mail_feeds"
                   sequence="20"
                   action="action_todo_task" />
+
     </data>
 </openerp>
